@@ -1,0 +1,23 @@
+{
+  "name": "playwrightproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "suite": "cucumber-js test --config=config/cucumber.js || (exit 0)",
+    "report": "npx ts-node src/support/report.ts",
+    "test": "npm run suite && npm run report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.41.2",
+    "@types/node": "^20.11.19"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^10.3.1",
+    "multiple-cucumber-html-reporter": "^3.6.2",
+    "ts-node": "^10.9.2"
+  }
+}
