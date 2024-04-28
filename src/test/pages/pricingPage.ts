@@ -1,8 +1,10 @@
-import { Page } from "@playwright/test"
+import BasePage from "./basePage";
 
-export default class PricingPageFactory {
+export default class PricingPageFactory extends BasePage{
 
-    constructor(private page: Page) {    }
+    constructor() {
+      super();
+    }
 
     private Elements = {
       linkCreatAccount: "//a[contains(text(),'Create an account')]",

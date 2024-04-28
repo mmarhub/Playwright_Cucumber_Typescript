@@ -9,11 +9,21 @@ let page: Page;
 
 BeforeAll( async function () {
   // browser = await chromium.launch({headless: false});
+  const { loadEnvFile } = require('node:process');
+  fixture.environment = process.env.npm_config_ENV?.toLowerCase() || "qa";
+  if (fixture.environment === "qa") {
+    // loadEnvFile() function works from Node version 21.7+
+    loadEnvFile(`${process.cwd()}/config/.env.qa`);
+  } else if (fixture.environment === "sit") {
+    loadEnvFile(`${process.cwd()}/config/.env.stage`);
+  } else {
+    throw new Error("Not a valid test environemnt.");
+  }
   browser = await launchBrowser();
 })
 
 Before( async function () {
-  context = await browser.newContext();
+  context = await browser.newContext({viewport: null});
   page = await context.newPage();
   fixture.page = page;
 })

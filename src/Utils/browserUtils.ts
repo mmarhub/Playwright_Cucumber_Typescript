@@ -7,7 +7,8 @@ export const launchBrowser = () => {
     
     const options: LaunchOptions = {
         headless: headless,
-        slowMo: 500
+        slowMo: 500,
+        args: ['--start-maximized']
     }
     
     switch (browserType) {

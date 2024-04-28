@@ -8,3 +8,4 @@ node_modules/
 test-results/
 tests-delete/
 tests-examples-delete/
+config/test.js
