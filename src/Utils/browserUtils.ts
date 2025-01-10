@@ -12,12 +12,22 @@ export const launchBrowser = () => {
     }
     
     switch (browserType) {
-        case "chrome":
+        case "chromium":
             return chromium.launch(options);
         case "firefox":
             return firefox.launch(options);
         case "webkit":
             return webkit.launch(options);
+        case "edge":
+            return require('@playwright/test').chromium.launch({
+                channel: 'msedge',
+                ...options
+            });
+        case "chrome":
+            return require('@playwright/test').chromium.launch({
+                channel: 'chrome',
+                ...options
+            });
         default:
             throw new Error("Please set the proper browser!")
     }

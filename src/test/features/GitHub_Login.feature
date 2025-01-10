@@ -16,3 +16,5 @@ Feature: GitHub Scenarios for GitHub Login
 
 # The npm CLI command to invoke the test with CLI arguments parameterized. 
 # npm run test --TAGS="@regression" --ENV="qa" --BROWSER="chrome"
+
+# https://www.softwaretestingmaterial.com/playwright-interview-questions/
