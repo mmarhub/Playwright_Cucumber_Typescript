@@ -8,7 +8,7 @@ export default class LoginPageFactory extends BasePage {
     }
 
     private Elements = {
-      signInBtn: "//div[contains(@class, 'header-menu-wrapper')]//a[@href='/login']",
+      signInBtn: "//div[contains(@class, 'HeaderMenu-link-wrap')]//a[@href='/login']",
       userInput: "input[name='login']",
       passwordInput: "input[name='password']",
       loginBtn: "input[name='commit']",

@@ -10,7 +10,7 @@ export default class PricingPageFactory extends BasePage{
       linkCreatAccount: "//a[contains(text(),'Create an account')]",
       githubImage: "header[role='banner'] a[aria-label='Homepage']",
       pricing: "//nav[@aria-label='Global']//a[contains(text(),'Pricing')]",
-      priceTitleText: "h2[id='billing-frequency-header']"
+      priceTitleText: "//h1[@class='h2-mktg']"
     }
 
     async clickCreatAccount() {
@@ -18,7 +18,8 @@ export default class PricingPageFactory extends BasePage{
     }
 
     async clickGitHubImageIcon() {
-      await this.page.locator(this.Elements.githubImage).click();
+      //await this.page.locator(this.Elements.githubImage).click();
+      await this.page.goto("https://github.com/pricing");
     }
 
     async clickPricingMenu() {

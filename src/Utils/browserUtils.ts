@@ -19,12 +19,12 @@ export const launchBrowser = () => {
         case "webkit":
             return webkit.launch(options);
         case "edge":
-            return require('@playwright/test').chromium.launch({
+            return chromium.launch({
                 channel: 'msedge',
                 ...options
             });
         case "chrome":
-            return require('@playwright/test').chromium.launch({
+            return chromium.launch({
                 channel: 'chrome',
                 ...options
             });
