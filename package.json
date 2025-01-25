@@ -6,14 +6,19 @@
   "scripts": {
     "suite": "cucumber-js test --config=config/cucumber.js || (exit 0)",
     "report": "npx ts-node src/support/report.ts",
+    "compile": "npx tsc --noEmit && npx eslint src/**",
     "test": "npm run suite && npm run report"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/js": "^9.19.0",
     "@playwright/test": "^1.41.2",
-    "@types/node": "^20.11.19"
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "^20.11.19",
+    "eslint": "^9.19.0",
+    "typescript-eslint": "^8.21.0"
   },
   "dependencies": {
     "@cucumber/cucumber": "^10.3.1",

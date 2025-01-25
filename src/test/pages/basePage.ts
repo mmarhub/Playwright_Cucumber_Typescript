@@ -1,4 +1,4 @@
-import { Locator, Page } from "@playwright/test";
+import { Page } from "@playwright/test";
 import { fixture } from "../../hooks/baseFixtures";
 
 export default class BasePage {

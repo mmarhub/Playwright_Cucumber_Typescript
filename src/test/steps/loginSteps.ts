@@ -14,7 +14,7 @@ Given('Open the browser and start {string} application', async function (app)  {
   try {
     await loginPage.launchApp(process.env.base_url!);
   } catch (err) {
-    throw new Error("No enviroment URL is specified.");
+    throw new Error(`"No enviroment URL is specified." : ${err}`);
   }
   /*if (process.env.npm_config_ENV?.toLowerCase() === "qa") {
     await loginPage.launchApp("https://github.com/");
