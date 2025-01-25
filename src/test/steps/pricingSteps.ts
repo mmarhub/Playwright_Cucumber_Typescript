@@ -15,6 +15,9 @@ Then('I click the Create an account', async function () {
 
 Then('I click on the github icon and navigate to home page', async function () {
   await pricingPage.clickGitHubImageIcon();
+  // if we need to add screenshot for any specific test step.
+  const sShot = await fixture.page.screenshot();
+  this.attach(sShot, "image/png");
 });
 
 Then('I goto Pricing page', async function () {
